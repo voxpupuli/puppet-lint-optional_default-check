@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
     'spec/**/*',
   ]
   spec.test_files  = Dir['spec/**/*']
-  spec.summary     = 'A puppet-lint plugin to Optional parameters default to `undef`'
+  spec.summary     = 'A puppet-lint plugin to check Optional parameters default to `undef`'
   spec.description = <<-EOF
     A puppet-lint plugin to check that Optional class/defined type parameters don't default to anything other than `undef`.
   EOF
