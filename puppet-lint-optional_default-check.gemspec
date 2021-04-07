@@ -3,6 +3,7 @@ Gem::Specification.new do |spec|
   spec.version     = '1.0.0'
   spec.license     = 'MIT'
   spec.author      = 'Alexander Fisher'
+  spec.homepage    = 'https://github.com/alexjfisher/puppet-lint-optional_default-check'
   spec.email       = 'alex@linfratech.co.uk'
   spec.files       = Dir[
     'README.md',
