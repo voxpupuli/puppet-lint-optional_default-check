@@ -8,12 +8,12 @@ PuppetLint.new_check(:optional_default) do
         default_value = extract_default_value_tokens(param)
         type = extract_type_tokens(param)
 
-        if type.size.positive? &&                                      # The parameter has a type
-           type[0].type == :CLASSREF && type[0].value == 'Optional' && # That type is Optional
-           default_value.size.positive? &&                             # There is a default set
-           (default_value.map(&:type) & %i[DOT LPAREN]).none? &&       # That default doesn't contain a call to a function
-           default_value[0].type != :UNDEF &&                          # It isn't undef
-           default_value[0].type != :VARIABLE                          # and it isn't a variable
+        if type.size.positive? &&                                  # The parameter has a type
+           type[0].type == :TYPE && type[0].value == 'Optional' && # That type is Optional
+           default_value.size.positive? &&                         # There is a default set
+           (default_value.map(&:type) & %i[DOT LPAREN]).none? &&   # That default doesn't contain a call to a function
+           default_value[0].type != :UNDEF &&                      # It isn't undef
+           default_value[0].type != :VARIABLE                      # and it isn't a variable
 
           notify(
             :warning,
@@ -27,7 +27,7 @@ PuppetLint.new_check(:optional_default) do
         # the default can't actually be coming from hiera.
         next unless idx[:type] == :DEFINE &&
                     type.size.positive? &&
-                    type[0].type == :CLASSREF && type[0].value == 'Optional' &&
+                    type[0].type == :TYPE && type[0].value == 'Optional' &&
                     default_value.size.zero?
 
         notify(
