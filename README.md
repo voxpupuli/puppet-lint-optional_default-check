@@ -1,7 +1,26 @@
 puppet-lint-optional\_default-check
 ===================================
 
+[![License](https://img.shields.io/github/license/voxpupuli/puppet-lint-optional_default-check.svg)](https://github.com/voxpupuli/puppet-lint-optional_default-check/blob/master/LICENSE)
+[![Test](https://github.com/voxpupuli/puppet-lint-optional_default-check/actions/workflows/test.yml/badge.svg)](https://github.com/voxpupuli/puppet-lint-optional_default-check/actions/workflows/test.yml)
+[![Release](https://github.com/voxpupuli/puppet-lint-optional_default-check/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/puppet-lint-optional_default-check/actions/workflows/release.yml)
+[![RubyGem Version](https://img.shields.io/gem/v/puppet-lint-optional_default-check.svg)](https://rubygems.org/gems/puppet-lint-optional_default-check)
+[![RubyGem Downloads](https://img.shields.io/gem/dt/puppet-lint-optional_default-check.svg)](https://rubygems.org/gems/puppet-lint-optional_default-check)
+[![Donated by Alexander Fisher](https://img.shields.io/badge/donated%20by-Alexander%20Fisher-fb7047.svg)](#transfer-notice)
+
+
 A puppet-lint plugin to check that `Optional` parameters don't default to something other than `undef`.
+
+## Table of contents
+
+* [Installing](#installing)
+  * [From the command line](#from-the-command-line)
+  * [In a Gemfile](#in-a-gemfile)
+* [Checks](#checks)
+* [Copyright](#copyright)
+* [Transfer notice](#transfer-notice)
+* [License](#license)
+* [Release Informaion](#release-information)
 
 ## Installing
 
@@ -61,8 +80,27 @@ class foo (
 }
 ```
 
-# Copyright
+## Copyright
 
 Copyright 2021 Alexander Fisher
 
-Licensed under the MIT License.
+## Transfer Notice
+
+This plugin was originally authored by [Alexander Fisher](https://github.com/alexjfisher).
+The maintainer preferred that Puppet Community take ownership of the module for future improvement and maintenance.
+Existing pull requests and issues were transferred over, please fork and continue to contribute here instead of Camptocamp.
+
+Previously: https://github.com/alexjfisher/puppet-lint-optional_default-check
+
+## License
+
+This gem is licensed under the MIT license.
+
+## Release information
+
+To make a new release, please do:
+* Update the version in the `puppet-lint-optional_default-check.gemspec` file
+* Install gems with `bundle install --with release --path .vendor`
+* generate the changelog with `bundle exec rake changelog`
+* Create a PR with it
+* After it got merged, push a tag. Travis will do the actual release
