@@ -20,6 +20,8 @@ jobs:
           - ruby: "2.7"
           - ruby: "3.0"
             coverage: "yes"
+    env:
+      COVERAGE: ${{ matrix.coverage }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Ruby ${{ matrix.ruby }}
@@ -27,8 +29,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-        env:
-          COVERAGE: ${{ matrix.coverage }}
       - name: Run rubocop
         run: bundle exec rake rubocop
       - name: Run tests
