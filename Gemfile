@@ -12,8 +12,8 @@ group :coverage, optional: ENV['COVERAGE']!='yes' do
 end
 
 group :tests do
-  gem 'rubocop', '~> 1.11.0'
-  gem 'rubocop-rspec', '~> 2.2.0'
-  gem 'rubocop-rake', '~> 0.5.1'
-  gem 'rubocop-performance', '~> 1.10.2'
+  gem 'rubocop', '>= 1.11.0', '< 1.13'
+  gem 'rubocop-rspec', '>= 2.2.0', '< 3'
+  gem 'rubocop-rake', '>= 0.5.1', '< 2'
+  gem 'rubocop-performance', '>= 1.10.2', '< 2'
 end
