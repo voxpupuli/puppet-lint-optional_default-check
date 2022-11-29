@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-optional_default-check'
-  spec.version     = '1.0.0'
+  spec.version     = '1.1.0'
   spec.license     = 'MIT'
   spec.author      = 'Vox Pupuli'
   spec.homepage    = 'https://github.com/voxpupuli/puppet-lint-optional_default-check'
@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
     'LICENSE',
     'lib/**/*',
     'spec/**/*',
+    'CHANGELOG.md',
   ]
   spec.test_files  = Dir['spec/**/*']
   spec.summary     = 'A puppet-lint plugin to check Optional parameters default to `undef`'
