@@ -19,7 +19,7 @@ PuppetLint.new_check(:optional_default) do
             :warning,
             message: 'Optional parameter defaults to something other than undef',
             line: param.line,
-            column: param.column
+            column: param.column,
           )
         end
 
@@ -34,7 +34,7 @@ PuppetLint.new_check(:optional_default) do
           :warning,
           message: 'Optional defined type parameter doesn\'t have a default',
           line: param.line,
-          column: param.column
+          column: param.column,
         )
       end
     end
