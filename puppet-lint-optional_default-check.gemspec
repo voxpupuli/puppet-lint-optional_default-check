@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
     A puppet-lint plugin to check that Optional class/defined type parameters don't default to anything other than `undef`.
   EOF
 
-  spec.required_ruby_version = '>= 2.4.0'
+  spec.required_ruby_version = '>= 2.7.0'
 
   spec.add_dependency             'puppet-lint', '>= 2.1', '< 4'
   spec.add_development_dependency 'rspec', '~> 3.0'
