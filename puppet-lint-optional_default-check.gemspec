@@ -12,7 +12,6 @@ Gem::Specification.new do |spec|
     'spec/**/*',
     'CHANGELOG.md',
   ]
-  spec.test_files  = Dir['spec/**/*']
   spec.summary     = 'A puppet-lint plugin to check Optional parameters default to `undef`'
   spec.description = <<-EOF
     A puppet-lint plugin to check that Optional class/defined type parameters don't default to anything other than `undef`.
@@ -20,5 +19,5 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.7.0'
 
-  spec.add_dependency             'puppet-lint', '>= 3', '< 5'
+  spec.add_dependency 'puppet-lint', '>= 3', '< 5'
 end
