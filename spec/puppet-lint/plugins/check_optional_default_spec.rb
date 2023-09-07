@@ -13,7 +13,7 @@ describe 'optional_default' do
         expect(problems).to have(1).problem
       end
 
-      col = (type == 'class' ? 21 : 22)
+      col = ((type == 'class') ? 21 : 22)
       it 'creates a warning' do
         expect(problems).to contain_warning(msg).on_line(1).in_column(col)
       end
@@ -25,7 +25,7 @@ describe 'optional_default' do
           expect(problems).to have(1).problem
         end
 
-        col = (type == 'class' ? 21 : 22)
+        col = ((type == 'class') ? 21 : 22)
         it 'creates a warning' do
           expect(problems).to contain_warning(msg).on_line(1).in_column(col)
         end
@@ -74,7 +74,7 @@ describe 'optional_default' do
         expect(problems).to have(1).problem
       end
 
-      col = (type == 'class' ? 32 : 33)
+      col = ((type == 'class') ? 32 : 33)
       it 'creates a warning' do
         expect(problems).to contain_warning(msg).on_line(1).in_column(col)
       end
