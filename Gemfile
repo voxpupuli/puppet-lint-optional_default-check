@@ -18,4 +18,5 @@ group :development do
   gem 'rspec-collection_matchers', '~> 1.2'
   gem 'rspec-its', '~> 1.3'
   gem 'voxpupuli-rubocop', '~> 2.0'
+  gem 'puppetlabs-lint', github: 'puppetlabs/puppet-lint', branch: 'fix-namespace-clash'
 end
