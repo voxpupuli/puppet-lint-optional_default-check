@@ -24,6 +24,6 @@ else
   ]
 end
 
-require 'puppetlabs-lint'
+require 'puppetlabs/puppetlabs-lint'
 
 PuppetLint::Plugins.load_spec_helper
